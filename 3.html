@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example-3 on CSS Grid!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 55px;
+      }
+
+      .parent {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 200px 1fr 150px;
+        grid-template-columns: 200px 1fr 300px;
+      }
+
+      div:nth-child(1) {
+        background: red;
+        grid-column: 1/4;
+      }
+      div:nth-child(2) {
+        background: aqua;
+      }
+      div:nth-child(3) {
+        background: green;
+      }
+      div:nth-child(4) {
+        background: purple;
+      }
+      div:nth-child(5) {
+        background: orange;
+        grid-column: 1/4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="parent">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+    </section>
+  </body>
+</html>
